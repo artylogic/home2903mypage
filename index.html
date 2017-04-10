@@ -30,7 +30,7 @@
     <div class="home-background">
         <img src="css/assets/images/background.jpg" alt="ocean wharf background" class="background">
         <div class="hello-phrase">
-            <h1>Hey!I`m Alex, Happy you`re here!<br>
+            <h1>Hey! I`m Alex, Happy you`re here!<br>
                 <span>Please, check my works below</span>
             </h1>
         </div>
@@ -605,25 +605,52 @@
             <h2>Contact details</h2>
         </article>
 
-        <!-- Must code a normal form here-->
-        <form id="feedback-form" form method="POST" action="https://formspree.io/avinogradov.lvov@gmail.com">
-            <label>Your Name:
-            <input type="text" name="your-name">
-            </label>
-            <br>
-            <label>Your Email:
-            <input type="email" name="your-email">
-            </label>
-            <br>
-            <label>Your message:
-            <textarea name="message" placeholder="Type your message"></textarea>
-            </label>
-            <br>
-            <input type="submit" value="Send">
-        </form>
+            <form id="contact-form" action="//formspree.io/avinogradov.lvov@gmail.com" method="POST">
+                <input type="text" name="Enter your Name" placeholder="Name" required>
+                <input type="email" name="Enter your Email" placeholder="Email" required>
+                <textarea name="Your Message" cols="50" rows="6" placeholder="Message" required></textarea>
+                
+                <input type="hidden" name="_subject" value="Subject">
+                <input type="hidden" name="_aa" value="email@aa.com">
+            
+                <input class="submit" cols="30" rows="2" type="submit" value="Send">
+            </form>
+            <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+            <script src="js/index.js"></script>
 
-        <footer>
-            <div id="map"></div>
+<footer>
+    <div id="map">
+        <script src='https://maps.googleapis.com/maps/api/js?v=3.exp'></script>
+        <div style='overflow:hidden;height:400px;width:100%;'>
+            <div id='gmap_canvas' style='height:400px;width:100%;'></div>
+            <div><small><a href="http://embedgooglemaps.com">embedgooglemaps.com</a></small></div>
+            <div><small><a href="http://buyproxies.io/">private proxies</a></small></div>
+            
+        </div>
+        <script type='text/javascript'>
+            function init_map() {
+                var myOptions = {
+                    zoom: 8,
+                    center: new google.maps.LatLng(49.839691, 24.029391),
+                    mapTypeId: google.maps.MapTypeId.ROADMAP
+                };
+                map = new google.maps.Map(document.getElementById('gmap_canvas'), myOptions);
+                marker = new google.maps.Marker({
+                    map: map,
+                    position: new google.maps.LatLng(49.839691, 24.029391)
+                });
+                infowindow = new google.maps.InfoWindow({
+                    content: '<strong>Название</strong><br>Lvov, Ukraine<br>'
+                });
+                google.maps.event.addListener(marker, 'click', function() {
+                    infowindow.open(map, marker);
+                });
+                infowindow.open(map, marker);
+            }
+            google.maps.event.addDomListener(window, 'load', init_map);
+        </script>
+    </div>
+            
             <br>
             <div class="footer-section1">
                 <h3>Get a website that looks amazing and boosts your business</h3>
@@ -636,10 +663,7 @@
 
         </footer>
     </main>
-    <script>
-        src = "https://code.jquery.com/jquery-3.2.1.min.js"
-    </script>
-    <script src="js/index.js"></script>
+
 </body>
 
 </html>

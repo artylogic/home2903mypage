@@ -4,6 +4,12 @@
 <head>
     <meta charset="UTF-8">
     <title>My personal page</title>
+
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
     <link rel="stylesheet" href="css/index.css">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
@@ -64,15 +70,15 @@
         <h3>I provide allround webdevelopment to create meaningful and lasting relationships. </h3>
 
         <div class="my-info">
-            <div class="info-block1"><img src="css/assets/images/info1.jpg" alt="project pic" class="infoimage1">info-block1-Lorem ipsum dolor sit amet, accusamus referrentur pri et. At eos vivendo adolescens. Ad cum prima simul, cum mutat probatus et. Gubergren prodesset vim
-                an, quod iuvaret nec et. Ea pericula ullamcorper qui. Numquam docendi ullamcorper an his. Ceteros menandri pri in, iudico adolescens id quo, primis offendit gloriatur has cu. Cu vidisse feugiat reprehendunt eum, nec ne agam nihil vitae,
-                ex saperet appetere mei. Ius omnium adipiscing cu. Ex qui illum consetetur, mei te minim epicuri. Pro melius adipisci conclusionemque no, vis debitis explicari repudiare at.</div>
+            <div class="info-block1"><img src="css/assets/images/info1.jpg" alt="project pic" class="infoimage1">info-block1-Lorem ipsum dolor sit amet, accusamus referrentur pri et. At eos vivendo adolescens. Ad cum prima simul, cum mutat probatus et.
+                Gubergren prodesset vim an, quod iuvaret nec et. Ea pericula ullamcorper qui. Numquam docendi ullamcorper an his. Ceteros menandri pri in, iudico adolescens id quo, primis offendit gloriatur has cu. Cu vidisse feugiat reprehendunt eum,
+                nec ne agam nihil vitae, ex saperet appetere mei. Ius omnium adipiscing cu. Ex qui illum consetetur, mei te minim epicuri. Pro melius adipisci conclusionemque no, vis debitis explicari repudiare at.</div>
             <div class="info-block2">info-block2-Lorem ipsum dolor sit amet, accusamus referrentur pri et. At eos vivendo adolescens. Ad cum prima simul, cum mutat probatus et. Gubergren prodesset vim an, quod iuvaret nec et. Ea pericula ullamcorper qui. Numquam docendi ullamcorper
                 an his. Ceteros menandri pri in, iudico adolescens id quo, primis offendit gloriatur has cu. Cu vidisse feugiat reprehendunt eum, nec ne agam nihil vitae, ex saperet appetere mei. Ius omnium adipiscing cu. Ex qui illum consetetur, mei
                 te minim epicuri. Pro melius adipisci conclusionemque no, vis debitis explicari repudiare at.<img src="css/assets/images/info2.jpg" alt="project pic" class="infoimage2"></div>
-            <div class="info-block3"><img src="css/assets/images/info3.jpg" alt="project pic" class="infoimage3">info-block3-Lorem ipsum dolor sit amet, accusamus referrentur pri et. At eos vivendo adolescens. Ad cum prima simul, cum mutat probatus et. Gubergren prodesset vim
-                an, quod iuvaret nec et. Ea pericula ullamcorper qui. Numquam docendi ullamcorper an his. Ceteros menandri pri in, iudico adolescens id quo, primis offendit gloriatur has cu. Cu vidisse feugiat reprehendunt eum, nec ne agam nihil vitae,
-                ex saperet appetere mei. Ius omnium adipiscing cu. Ex qui illum consetetur, mei te minim epicuri. Pro melius adipisci conclusionemque no, vis debitis explicari repudiare at.</div>
+            <div class="info-block3"><img src="css/assets/images/info3.jpg" alt="project pic" class="infoimage3">info-block3-Lorem ipsum dolor sit amet, accusamus referrentur pri et. At eos vivendo adolescens. Ad cum prima simul, cum mutat probatus et.
+                Gubergren prodesset vim an, quod iuvaret nec et. Ea pericula ullamcorper qui. Numquam docendi ullamcorper an his. Ceteros menandri pri in, iudico adolescens id quo, primis offendit gloriatur has cu. Cu vidisse feugiat reprehendunt eum,
+                nec ne agam nihil vitae, ex saperet appetere mei. Ius omnium adipiscing cu. Ex qui illum consetetur, mei te minim epicuri. Pro melius adipisci conclusionemque no, vis debitis explicari repudiare at.</div>
         </div>
 
         <div id="abilities" class="container">
@@ -588,69 +594,67 @@
                 </div>
             </div>
         </div>
-        <!--<section class="my-skills">-->
-        <!--    <article class="skills-block1">Skills-block1</article>-->
-        <!--    <article class="skills-block2">Skills-block2</article>-->
-        <!--    <article class="skills-block3">Skills-block3</article>-->
-        <!-- must code a contact button here and a logo -->
-        <!--</section>-->
         <p></p>
-        <section id="contact-img">
-            <div id="contact-phrase">
-                <h2>Let`s have a chat</h2>
-            </div>
-        </section>
         <p></p>
         <article id="contact-info">
             <h2>Contact details</h2>
         </article>
 
-            <form id="contact-form" action="//formspree.io/avinogradov.lvov@gmail.com" method="POST">
-                <input type="text" name="Enter your Name" placeholder="Name" required>
-                <input type="email" name="Enter your Email" placeholder="Email" required>
-                <textarea name="Your Message" cols="50" rows="6" placeholder="Message" required></textarea>
-                
-                <input type="hidden" name="_subject" value="Subject">
-                <input type="hidden" name="_aa" value="email@aa.com">
-            
-                <input class="submit" cols="30" rows="2" type="submit" value="Send">
+        <div id="formBlock">
+            <form id="someForm">
+                <label for="name">Name:</label> <input type="text" id="name"><br/>
+                <label for="email">Email:</label> <input type="email" id="email"><br/>
+                <label for="comments">Comments:</label> <br/>
+                <textarea id="comments" cols=30 rows=6></textarea><br/>
+                <input type="submit">
             </form>
-            <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
-            <script src="js/index.js"></script>
-
-<footer>
-    <div id="map">
-        <script src='https://maps.googleapis.com/maps/api/js?v=3.exp'></script>
-        <div style='overflow:hidden;height:400px;width:100%;'>
-            <div id='gmap_canvas' style='height:400px;width:100%;'></div>
-            <div><small><a href="http://embedgooglemaps.com">embedgooglemaps.com</a></small></div>
-            <div><small><a href="http://buyproxies.io/">private proxies</a></small></div>
-            
         </div>
-        <script type='text/javascript'>
-            function init_map() {
-                var myOptions = {
-                    zoom: 8,
-                    center: new google.maps.LatLng(49.839691, 24.029391),
-                    mapTypeId: google.maps.MapTypeId.ROADMAP
-                };
-                map = new google.maps.Map(document.getElementById('gmap_canvas'), myOptions);
-                marker = new google.maps.Marker({
-                    map: map,
-                    position: new google.maps.LatLng(49.839691, 24.029391)
-                });
-                infowindow = new google.maps.InfoWindow({
-                    content: '<strong>Название</strong><br>Lvov, Ukraine<br>'
-                });
-                google.maps.event.addListener(marker, 'click', function() {
-                    infowindow.open(map, marker);
-                });
-                infowindow.open(map, marker);
-            }
-            google.maps.event.addDomListener(window, 'load', init_map);
-        </script>
-    </div>
-            
+        <div id="thankyouBlock" style="display:none">
+            <p>
+                Thank you for filling out the form. I care a lot about it.
+            </p>
+        </div>
+
+        <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+        <script src="js/index.js"></script>
+
+        <footer>
+            <div class="row">
+                <div id="map">
+                    <script src='https://maps.googleapis.com/maps/api/js?v=3.exp'></script>
+                    <div class="img-responsive" style='overflow:hidden;height:300px;width:100%;'>
+                        <div id='gmap_canvas' style='height:400px;width:100%;'></div>
+                        <div><small><a href="http://embedgooglemaps.com">embedgooglemaps.com</a></small></div>
+                        <div><small><a href="http://buyproxies.io/">private proxies</a></small></div>
+
+                    </div>
+                </div>
+                <script type='text/javascript'>
+                    function init_map() {
+                        var myOptions = {
+                            zoom: 8,
+                            center: new google.maps.LatLng(49.839691, 24.029391),
+                            mapTypeId: google.maps.MapTypeId.ROADMAP
+                        };
+                        map = new google.maps.Map(document.getElementById('gmap_canvas'), myOptions);
+                        marker = new google.maps.Marker({
+                            map: map,
+                            position: new google.maps.LatLng(49.839691, 24.029391)
+                        });
+                        infowindow = new google.maps.InfoWindow({
+                            content: '<strong>Название</strong><br>Lvov, Ukraine<br>'
+                        });
+                        google.maps.event.addListener(marker, 'click', function() {
+                            infowindow.open(map, marker);
+                        });
+                        infowindow.open(map, marker);
+                    }
+                    google.maps.event.addDomListener(window, 'load', init_map);
+                </script>
+            </div>
+            <br>
+            <br>
+            <br>
             <br>
             <div class="footer-section1">
                 <h3>Get a website that looks amazing and boosts your business</h3>
@@ -660,10 +664,33 @@
             </div>
             <div class="footer-section3">...</div>
 
-
+<div class="container">
+            <div class="footer-social">
+                <div class="container text-center">
+                    <ul class="list-inline">
+                        <li class="list-inline-item social-github">
+                            <a href="https://github.com/blackrockdigital"><i class="fa fa-github"></i></a>
+                        </li>
+                        <li class="list-inline-item social-twitter">
+                            <a href="https://twitter.com/sbootstrap"><i class="fa fa-twitter"></i></a>
+                        </li>
+                        <li class="list-inline-item social-facebook">
+                            <a href="https://www.facebook.com/StartBootstrap/"><i class="fa fa-facebook"></i></a>
+                        </li>
+                        <li class="list-inline-item social-google-plus">
+                            <a href="https://plus.google.com/+Startbootstrap"><i class="fa fa-google-plus"></i></a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            </div>
         </footer>
     </main>
 
+
+    <script src="http://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 </body>
 
 </html>

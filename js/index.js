@@ -1,24 +1,38 @@
-var $contactForm = $('#contact-form');
-$contactForm.submit(function(e) {
-	e.preventDefault();
-	$.ajax({
-		url: '//formspree.io/avinogradov.lvov@gmail.com',
-		method: 'POST',
-		data: $(this).serialize(),
-		dataType: 'json',
-		beforeSend: function() {
-			$contactForm.append('<div class="alert alert--loading">Sending message…</div>');
-		},
-		success: function(data) {
-			$contactForm.find('.alert--loading').hide();
-			$contactForm.append('<div class="alert alert--success">Message sent!</div>');
-		},
-		error: function(err) {
-			$contactForm.find('.alert--loading').hide();
-			$contactForm.append('<div class="alert alert--error">Ops, there was an error.</div>');
-		}
-	});
-});
+$(document).ready(function() {
+
+    $('#someForm').on('submit', function(e) {
+        e.preventDefault();
+        
+        //get the name field value
+        var name = $('#name').val();
+        //get the name field value
+        var email = $('#email').val();
+        //get the comments
+        var comments = $('#comments').val();
+                    
+      
+        $.ajax({
+            url:'https://formspree.io/raymondcamden@gmail.com',
+            method:'POST',
+            data:{
+                name:name,
+                _replyto:email,
+                 email:email,
+                comments:comments,
+                _subject:'My Form Submission',
+            },
+            dataType:"json",
+            success:function() {
+                console.log('success'); 
+                $('#formBlock').hide();
+                $('#thankyouBlock').show();
+            }   
+
+        });     
+        
+    });
+
+}); 
 
 
 

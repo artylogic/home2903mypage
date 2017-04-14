@@ -6,10 +6,10 @@
     max-width: 970px;
     max-height: 760px;
     margin: 0 auto;
-    
+}
 @font-face {
-    font-family: toms;
-    src: url(assets/fonts/toms.ttf);
+  font-family: 'toms';
+  src: url('assets/fonts/toms.ttf') format('truetype');
 }
 
 .image-wrapper {
@@ -46,11 +46,11 @@
 }
 
 .home-background {
-    background-size: cover;
     max-width: 970px;
     height: 100vh;
     margin: 0 auto;
-    background: url(assets/images/background.jpg) no-repeat center bottom;
+    background: url(assets/images/background.jpg) no-repeat center;
+    background-size: cover;
  
 }
 
@@ -63,15 +63,19 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    position: absolute;
-    top: 45vh;
-    left: 0;
     width: 100%;
     font-family: toms;
-    src: url(assets/fonts/toms.ttf);
+    /*src: url(assets/fonts/toms.ttf);*/
     font-size: normal;
     color: black;
-    
+    height: 100%;
+}    
+.hello-phrase h1{
+    text-shadow: 1px 1px 1px #fff;
+    background: rgba(255,255,255,0.5);
+    padding: 25px;
+    width: 100%;
+    text-align: center;
 }
 
 /*.my-projects {*/
@@ -164,4 +168,6 @@
     display: flex;
     position: center;
 }
+
+
 
